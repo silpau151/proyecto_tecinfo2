@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const imagenes = document.querySelectorAll('.imagen-contenedor');
+    const imagenes = document.querySelectorAll('#galeria img');
 
     imagenes.forEach(imagen => {
         imagen.addEventListener('click', function() {
-            const imageUrl = this.querySelector('img').src;
-            alert(`Has hecho clic en: ${imageUrl}`);
-            // Aquí puedes agregar una funcionalidad más compleja, como abrir un modal con la imagen.
+            const altTexto = this.alt;
+            alert(`Hiciste clic en: ${altTexto}`);
+            // Aquí puedes agregar más interactividad, como mostrar la imagen en un modal
         });
     });
 });
