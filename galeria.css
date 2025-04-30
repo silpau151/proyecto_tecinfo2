@@ -1,67 +1,22 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
+.galeria {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-main#galeria {
-    background-color: white;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre las imágenes */
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 960px;
+    background-color: #f0f0f0; /* Un fondo gris claro para la galería */
+    border: 2px solid #333; /* Borde negro para la galería */
 }
 
-.contenedor-imagenes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.contenedor-imagenes img {
-    width: 100%;
+.galeria img {
+    width: calc(33.33% - 10px); /* Tres imágenes por fila con espacio entre ellas */
     height: auto;
-    border: 5px solid #555; /* Marco gris */
-    box-shadow: 3px 3px 5px #888888; /* Sombra suave */
-    cursor: pointer; /* Indica que la imagen es interactiva */
-    transition: transform 0.3s ease-in-out; /* Transición suave para el efecto hover */
+    border: 5px solid #666; /* Marco gris para cada imagen */
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
 }
 
-.contenedor-imagenes img:hover {
-    transform: scale(1.05); /* Pequeño efecto de zoom al pasar el ratón */
-    border-color: black; /* Cambia el color del borde a negro al hacer hover */
+.galeria img:hover {
+    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave al pasar el ratón */
+    cursor: pointer; /* Cambiar el cursor a un puntero */
 }
