@@ -1,0 +1,93 @@
+body {
+    background-color: lightgray;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.portada {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 960px;
+}
+
+.portada h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.portada-imagen {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.integrantes {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.integrantes h2 {
+    color: #555;
+    margin-top: 0;
+}
+
+.integrantes ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.docente {
+    font-style: italic;
+    color: #777;
+}
+
+#miBoton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#miBoton:hover {
+    background-color: #0056b3;
+}
