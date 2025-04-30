@@ -6,15 +6,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
 }
 
 header {
-    width: 100%;
     background-color: #333;
     color: white;
+    width: 100%;
     padding: 10px 0;
     text-align: center;
+}
+
+header marquee {
+    padding: 10px;
+    background-color: #555;
 }
 
 nav ul {
@@ -25,56 +29,46 @@ nav ul {
     justify-content: center;
 }
 
-nav li {
+nav ul li {
     margin: 0 15px;
 }
 
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
 }
 
-.portada {
+main {
     background-color: white;
-    padding: 30px;
+    padding: 20px;
+    margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 20px;
-    width: 80%;
-    max-width: 960px;
 }
 
-.portada h1 {
+#portada h1 {
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.portada-imagen {
-    max-width: 100%;
-    height: auto;
+#portada img {
     margin-bottom: 20px;
     border-radius: 5px;
 }
 
-.integrantes {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.integrantes h2 {
+#portada h2 {
     color: #555;
-    margin-top: 0;
+    margin-top: 20px;
 }
 
-.integrantes ul {
-    list-style: square;
-    padding-left: 20px;
+#portada ul {
+    list-style: none;
+    padding: 0;
 }
 
-.docente {
-    font-style: italic;
-    color: #777;
+#portada ul li {
+    margin-bottom: 5px;
 }
 
 #miBoton {
@@ -85,9 +79,10 @@ nav a {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
 #miBoton:hover {
     background-color: #0056b3;
 }
+</style>
