@@ -1,22 +1,61 @@
-.galeria {
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Espacio entre las imágenes */
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
-    background-color: #f0f0f0; /* Un fondo gris claro para la galería */
-    border: 2px solid #333; /* Borde negro para la galería */
+    width: 80%;
+    margin-top: 20px;
 }
 
-.galeria img {
-    width: calc(33.33% - 10px); /* Tres imágenes por fila con espacio entre ellas */
+.contenedor-imagen {
+    border: 5px solid #555;
+    border-radius: 8px;
+    overflow: hidden; /* Para que la imagen no se salga del borde */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out; /* Para la interactividad */
+}
+
+.contenedor-imagen:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contenedor-imagen img {
+    width: 100%;
     height: auto;
-    border: 5px solid #666; /* Marco gris para cada imagen */
-    box-sizing: border-box; /* Incluye el borde en el ancho y alto */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
-}
-
-.galeria img:hover {
-    transform: scale(1.05); /* Ligeramente más grande al pasar el ratón */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra suave al pasar el ratón */
-    cursor: pointer; /* Cambiar el cursor a un puntero */
+    display: block; /* Evita espacio extra debajo de la imagen */
 }
