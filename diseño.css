@@ -11,55 +11,56 @@ body {
 header {
     background-color: #333;
     color: white;
-    width: 100%;
-    padding: 10px 0;
+    padding: 1em 0;
     text-align: center;
+    width: 100%;
 }
 
 header marquee {
-    padding: 10px;
     background-color: #555;
+    padding: 0.5em 0;
+}
+
+header h1 {
+    margin-bottom: 0.5em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 10px 0;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
 
-nav ul li {
-    margin: 0 15px;
+nav li {
+    margin: 0 1em;
 }
 
-nav ul li a {
+nav a {
     color: white;
     text-decoration: none;
 }
 
 main {
-    background-color: white;
+    width: 80%;
     padding: 20px;
+    background-color: white;
     margin-top: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-#portada h1 {
-    color: #333;
-    margin-bottom: 10px;
-}
-
 #portada img {
-    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
     border-radius: 5px;
 }
 
 #portada h2 {
-    color: #555;
-    margin-top: 20px;
+    margin-top: 1em;
 }
 
 #portada ul {
@@ -67,22 +68,21 @@ main {
     padding: 0;
 }
 
-#portada ul li {
-    margin-bottom: 5px;
+#portada li {
+    margin-bottom: 0.5em;
 }
 
 #miBoton {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
     border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 20px;
+    font-size: 1em;
+    margin-top: 1em;
 }
 
 #miBoton:hover {
     background-color: #0056b3;
 }
-</style>
