@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const imagenes = document.querySelectorAll('.galeria img');
+    const contenedoresImagen = document.querySelectorAll('.contenedor-imagen');
 
-    imagenes.forEach(imagen => {
-        imagen.addEventListener('click', function() {
-            // Puedes personalizar la acción al hacer clic en la imagen aquí
-            alert('Hiciste clic en: ' + this.alt); // Ejemplo: Mostrar una alerta con el texto alternativo
-            // Otra opción podría ser abrir la imagen en un modal o realizar otra acción.
+    contenedoresImagen.forEach(contenedor => {
+        contenedor.addEventListener('click', function() {
+            const imagen = this.querySelector('img');
+            const rutaImagen = imagen.getAttribute('src');
+            alert(`¡Imagen ক্লিকada! Ruta: ${rutaImagen}`);
+            // Aquí puedes agregar funcionalidades más complejas, como mostrar la imagen en un modal
         });
     });
 });
