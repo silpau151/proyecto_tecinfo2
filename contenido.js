@@ -1,36 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const consejos = document.querySelectorAll('.consejo');
-    const botonesAccion = document.querySelectorAll('.accion');
+document.addEventListener('DOMContentLoaded', function() {
+    const consejoCards = document.querySelectorAll('.consejo-card');
 
-    // Animación de entrada de los consejos
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('mostrar');
-                observer.unobserve(entry.target);
-            }
+    consejoCards.forEach(card => {
+        const mostrarDetalleBtn = card.querySelector('.mostrar-detalle');
+        const detalleDiv = card.querySelector('.detalle');
+        const alertaBtn = card.querySelector('.alerta');
+
+        mostrarDetalleBtn.addEventListener('click', function() {
+            detalleDiv.classList.toggle('oculto');
+            mostrarDetalleBtn.textContent = detalleDiv.classList.contains('oculto') ? 'Ver más' : 'Ocultar';
         });
-    }, { threshold: 0.5 }); // La animación se activa cuando el 50% del elemento es visible
 
-    consejos.forEach(consejo => {
-        observer.observe(consejo);
+        alertaBtn.addEventListener('click', function() {
+            alert(`¡Entendido! Tendré más cuidado con ${card.querySelector('h2').textContent.toLowerCase()}.`);
+        });
+
+        // Animación sutil al cargar
+        card.style.opacity = 0;
+        setTimeout(() => {
+            card.style.transition = 'opacity 0.5s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out';
+            card.style.opacity = 1;
+        }, 100 * Array.from(consejoCards).indexOf(card)); // Retardo para cada tarjeta
     });
 
-    // Interacción de los botones
-    botonesAccion.forEach(boton => {
-        boton.addEventListener('mouseover', () => {
-            boton.style.transform = 'scale(1.05)';
-            boton.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.4)';
-        });
-
-        boton.addEventListener('mouseout', () => {
-            boton.style.transform = 'scale(1)';
-            boton.style.boxShadow = 'none';
-        });
-
-        boton.addEventListener('click', (event) => {
-            const consejoNumero = event.target.parentNode.dataset.consejo;
-            alert(`Has hecho clic en el consejo número ${consejoNumero}. ¡Recuerda tener precaución!`);
-        });
-    });
+    // Animación para el encabezado
+    const header = document.querySelector('header');
+    header.style.transform = 'translateY(-20px)';
+    header.style.opacity = 0;
+    setTimeout(() => {
+        header.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+        header.style.transform = 'translateY(0)';
+        header.style.opacity = 1;
+    }, 300);
 });
