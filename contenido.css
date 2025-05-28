@@ -52,6 +52,9 @@ header p {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .consejo-card:hover {
@@ -59,10 +62,11 @@ header p {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.icono {
-    font-size: 3em;
+.consejo-imagen {
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
-    color: #bbb;
+    object-fit: contain; /* Para que la imagen se ajuste sin deformarse */
 }
 
 .consejo-card h2 {
