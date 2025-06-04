@@ -3,43 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Imágenes</title>
+    <title>Mi Galería de Imágenes</title>
     <link rel="stylesheet" href="estilos_galeria.css">
 </head>
 <body>
-    <header>
-        <h1>Galería de Imágenes</h1>
-        <nav>
+    <header class="cabecera">
+        <h1>Mi Galería</h1>
+        <nav class="menu">
             <ul>
-                <li><a href="inicio.html">Bienvenid@</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="#">Información de Proyecto</a></li>
-                <li><a href="#">Quienes somos</a></li>
-                <li><a href="#">Contactos</a></li>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="#">Proyecto</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="galeria">
-        <div class="contenedor-imagen">
-            <img src="imagen1.jpg" alt="Imagen 1">
-        </div>
-        <div class="contenedor-imagen">
-            <img src="imagen2.jpg" alt="Imagen 2">
-        </div>
-        <div class="contenedor-imagen">
-            <img src="imagen3.jpg" alt="Imagen 3">
-        </div>
-        <div class="contenedor-imagen">
-            <img src="imagen4.jpg" alt="Imagen 4">
-        </div>
-        <div class="contenedor-imagen">
-            <img src="imagen5.jpg" alt="Imagen 5">
-        </div>
-        <div class="contenedor-imagen">
-            <img src="imagen6.jpg" alt="Imagen 6">
-        </div>
+    <main class="principal">
+        <section class="galeria-imagenes">
+            <h2 class="galeria-titulo">Explora Nuestras Imágenes</h2>
+            <div class="fila-imagenes">
+                <figure class="imagen-contenedor">
+                    <img src="imagen1.jpg" alt="Descripción de la imagen 1">
+                    <figcaption>Imagen 1</figcaption>
+                </figure>
+                <figure class="imagen-contenedor">
+                    <img src="imagen2.jpg" alt="Descripción de la imagen 2">
+                     <figcaption>Imagen 2</figcaption>
+                </figure>
+            </div>
+             <div class="fila-imagenes">
+                <figure class="imagen-contenedor">
+                    <img src="imagen3.jpg" alt="Descripción de la imagen 3">
+                     <figcaption>Imagen 3</figcaption>
+                </figure>
+                <figure class="imagen-contenedor">
+                    <img src="imagen4.jpg" alt="Descripción de la imagen 4">
+                     <figcaption>Imagen 4</figcaption>
+                </figure>
+            </div>
+             <div class="fila-imagenes">
+                <figure class="imagen-contenedor">
+                    <img src="imagen5.jpg" alt="Descripción de la imagen 5">
+                     <figcaption>Imagen 5</figcaption>
+                </figure>
+                <figure class="imagen-contenedor">
+                    <img src="imagen6.jpg" alt="Descripción de la imagen 6">
+                     <figcaption>Imagen 6</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
+
+    <footer class="pie">
+        <p>&copy; 2025 Mi Galería de Imágenes</p>
+    </footer>
 
     <script src="script_galeria.js"></script>
 </body>
