@@ -6,73 +6,89 @@
     <title>¿Quiénes Somos?</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #e9ecef;
+            color: #343a40;
             line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top */
+            min-height: 100vh; /* Ensures content is centered vertically on shorter screens */
+            box-sizing: border-box; /* Include padding in element's total width and height */
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
+            width: 100%;
             margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
         }
         h1 {
-            color: #0056b3;
-            text-align: center;
-            margin-bottom: 30px;
+            color: #007bff;
+            margin-bottom: 25px;
+            font-size: 2.5em;
         }
         p {
-            margin-bottom: 20px;
-            text-align: center;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            color: #555;
         }
         .pdf-section {
-            margin-top: 40px;
-            border-top: 1px solid #eee;
+            margin-top: 50px;
             padding-top: 30px;
-            text-align: center;
+            border-top: 1px solid #dee2e6;
+        }
+        h2 {
+            color: #007bff;
+            margin-bottom: 25px;
+            font-size: 1.8em;
         }
         iframe {
             width: 100%;
-            height: 600px; /* Adjust height as needed */
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            height: 650px; /* Adjust height as needed for better viewing */
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        a {
+        .download-link {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #007bff;
+            padding: 12px 25px;
+            background-color: #28a745;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
         }
-        a:hover {
-            background-color: #0056b3;
+        .download-link:hover {
+            background-color: #218838;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>¿Quiénes Somos?</h1>
-        <p>Somos alumnos de bachillerato de 4° semestre.</p>
-        <p>Nuestra misión es comunicar y generar conciencia</p>
-        <p>sobre el **robo de información** y sus implicaciones.</p>
-        <p>Buscamos educar y prevenir a nuestra comunidad.</p>
-        <p>¡Infórmate con nosotros!</p>
+        <p>Somos alumnos de bachillerato de 4to semestre.</p>
+        <p>Nuestro principal objetivo es **comunicar** y **concientizar**</p>
+        <p>sobre el importante tema del **robo de información**.</p>
+        <p>Buscamos educar a la comunidad para prevenir riesgos</p>
+        <p>y promover prácticas seguras en línea. ¡Infórmate con nosotros!</p>
 
         <div class="pdf-section">
-            <h2>Nuestro Contenido en PDF</h2>
-            <p>Aquí puedes ver nuestro archivo PDF. Si no se carga correctamente, puedes descargarlo directamente.</p>
+            <h2>Explora Nuestro Contenido</h2>
+            <p>A continuación, puedes visualizar nuestro documento en PDF. Si tienes problemas para verlo directamente en la página, puedes descargarlo.</p>
 
-            <iframe src="Robo de informacion.odp" type="application/pdf">
-                <p>Tu navegador no soporta la visualización de PDFs directamente. Puedes <a href="nombre-de-tu-archivo.pdf" download>descargar el PDF aquí</a>.</p>
+            <iframe src="robo de informacion.pdf" type="application/pdf">
+                <p>Tu navegador no soporta la visualización de PDFs. No te preocupes, puedes <a href="robo de informacion.pdf" class="download-link" download>descargar el PDF aquí</a>.</p>
             </iframe>
 
-            <a href="Robo de informacion.odp" download>Descargar PDF</a>
+            <a href="robo de informacion.pdf" class="download-link" download>Descargar "Robo de Información" PDF</a>
         </div>
     </div>
 </body>
